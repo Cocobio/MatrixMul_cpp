@@ -301,6 +301,14 @@ int main() {
 	cout << "matrix multiplication strassen in " << t << " sec " << endl;
 	
 	// if (c!= NULL) printM(c, r_a, c_b, "c");
+	free(a[0]);
+	free(b[0]);
+	free(c[0]);
+	free(a);
+	free(b);
+	free(c);
+
+	return 0;
 }
 
 #endif
