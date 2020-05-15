@@ -39,7 +39,7 @@ using namespace std;
 
 int main() {
 	// srand(time(0));
-	int squared = 2;
+	int squared = 1024;
 	int r_a = squared;
 	int c_b = squared;
 	int n = squared;
