@@ -1,4 +1,12 @@
-// #include <cstdlib>
+/*
+Matrix multiplication algorithm. Naive version.
+
+time complexity = O(n^3)
+space complexity = O(1)
+
+*** Slow because of cache misses. Inner most loop iterates thourght b's rows.
+*/
+
 #include <string>
 #include <cstring>
 #include "matrix_utility.cpp"
@@ -6,18 +14,15 @@
 
 template <typename T>
 T** matrixMultiplication(T** a, int r_a, int c_a, T** b, int r_b, int c_b) {
+	// check wether matrix can be multiplied
 	if (c_a!=r_b) return NULL;
 	int r_c = r_a;
 	int c_c = c_b;
 
-	T* c_pool = (T*) malloc(r_c*c_c*sizeof(T));
-	memset(c_pool, 0, r_c*c_c*sizeof(T));
+	// allocate result matrix
+	T** c = allocateM<T>(r_c, c_c);
 
-	T** c = (T**) malloc(r_c*sizeof(T*));
-
-	for (int i=0; i<r_c; i++)
-		c[i] = &c_pool[c_c*i];
-
+	// Straight forward iteration
 	for (int i=0; i<r_a; i++)
 		for (int j=0; j<c_b; j++)
 			for (int k=0; k<r_b; k++)
@@ -36,7 +41,7 @@ using namespace std;
 
 int main() {
 	// srand(time(0));
-	int squared = 1024;
+	int squared = 4096;
 	int r_a = squared;
 	int c_b = squared;
 	int n = squared;
