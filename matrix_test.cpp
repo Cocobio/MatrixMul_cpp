@@ -201,7 +201,7 @@ void runTest(string folder_a, string folder_b, string folder_c) {
 
 // Test only measures time. It doesn't write the output matrix to a file.
 int main() {
-	// // Data creation functions
+	// Data creation functions
 	createSquaredData();
 	createNonSquaredData();
 

@@ -282,7 +282,7 @@ using namespace std;
 
 int main() {
 	// srand(time(0));
-	int squared = 1024;
+	int squared = 512;
 	int r_a = squared;
 	int c_b = squared;
 	int n = squared;
@@ -305,7 +305,7 @@ int main() {
 
 	float **c; // = matrixMultiplicationStrassen(a, r_a, c_a, b, r_b, c_b);
 	double t = measure_time_of(matrixMultiplicationStrassen_Opti, a, r_a, c_a, b, r_b, c_b, &c);
-	cout << "matrix multiplication strassen in " << t << " sec " << endl;
+	// cout << "matrix multiplication strassen in " << t << " sec " << endl;
 	
 	// if (c!= NULL) printM(c, r_a, c_b, "c");
 }

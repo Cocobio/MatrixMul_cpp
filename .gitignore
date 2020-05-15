@@ -31,7 +31,12 @@
 *.out
 *.app
 
+# Tmp matrices files
+*.bin
+*.dat
+
 # ignore dir
 A/
 B/
 C/
+profiler_data/
