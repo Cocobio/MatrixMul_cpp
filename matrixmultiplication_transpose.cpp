@@ -66,7 +66,7 @@ int main() {
 	// printM(b, r_b, c_b, "b");
 
 	float **c;
-	double t = measure_time_of(matrixMultiplication_transpose, a, r_a, c_a, b, r_b, c_b, &c);
+	double t = measure_time_of(matrixMultiplicationTranspose, a, r_a, c_a, b, r_b, c_b, &c);
 	// cout << "matrix multiplication transpose in " << t << " sec " << endl;
 	
 	// if (c!= NULL) printM(c, r_a, c_b, "c");
