@@ -300,7 +300,7 @@ int main() {
 	double t = measure_time_of(matrixMultiplicationStrassen, a, r_a, c_a, b, r_b, c_b, &c);
 	cout << "matrix multiplication strassen in " << t << " sec " << endl;
 	
-	if (c!= NULL) printM(c, r_a, c_b, "c");
+	// if (c!= NULL) printM(c, r_a, c_b, "c");
 }
 
 #endif

@@ -62,7 +62,7 @@ int main() {
 	double t = measure_time_of(matrixMultiplicationForPosition, a, r_a, c_a, b, r_b, c_b, &c);
 	cout << "matrix multiplication in " << t << " sec " << endl;
 
-	printM(c, r_a, c_b, "c");
+	// printM(c, r_a, c_b, "c");
 }
 
 #endif
